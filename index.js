@@ -71,7 +71,6 @@ client.connect(err => {
     app.get('/getServices', (req, res) => {
         serviceCollection.find({})
         .toArray((err, documents) => {
-            if(err) console.log(err);
             res.send(documents)
         })
     })
